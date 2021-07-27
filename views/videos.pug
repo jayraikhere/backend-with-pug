@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Project
+// <link rel="stylesheet" href="../CSS/videos.css">
+link(rel='stylesheet' media='screen and (min-width: 950px)' href='../static/videos.css')
+link(rel='stylesheet' media='screen and (max-width: 950px)' href='../static/videos-phone.css')
+nav.navbar
+  .three_lines
+    div
+    div
+    div
+  img(src='https://he-s3.s3.amazonaws.com/media/avatars/jayraykhere/resized/160/aoh14gjxlrhp1m3a6w25wepfziuhnglcw3g8grievnou' alt='')
+  .menu
+    a(href='/index') Home
+    a(href='/videos') Videos
+    a(href='/blog') Blog
+    a(href='/contact') Contact Me
+  .buttons
+    // <button class="btn">Search</button>
+    button.btn Login
+    button.btn Sign Up
+.grid
+  //- .items
+  //-   img(src='sample.png' alt='not found')
+  //-   h1 Project_Name
+  //-   p
+  //-     | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia porro laudantium architecto magnam laborum impedit dolor nisi vitae saepe, molestias at.
+  //-   a(href='/videos.html') Start Watching &gt;&gt;
+  
+  //- mixin article(title)
+  //-   .items
+  //-     h1= Project_Name
+  //-     p=paragraph
+  //-     a(href='/videos.html') Start Watching &gt;&gt;
+
+  //- //- +article('Hello world')
+  //- - var n = 0;
+    //- while n < 4
+  //- for i of content
+  each val, key in Project
+    .items
+      //- img(src=`../static/img/sample${key}.png` alt='not found')
+      img(src=`../static/img/sample.png` alt='not found')
+      h1 #{val.cname}
+      p
+        //- | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia porro laudantium architecto magnam laborum impedit dolor nisi vitae saepe, molestias at.
+        | #{val.desc}
+      a(href='/videos.html') Start Watching &gt;&gt;
+
+footer
+  | Copyright &copy; 2021-2022 My-Project

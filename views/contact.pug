@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Project
+link(rel='stylesheet' href='../CSS/contact.css')
+link(rel='stylesheet' media='screen and (min-width: 950px)' href='../static/contact.css')
+link(rel='stylesheet' media='screen and (max-width: 950px)' href='../static/contact-phone.css')
+nav.navbar
+  .three_lines
+    div
+    div
+    div
+  img(src='https://he-s3.s3.amazonaws.com/media/avatars/jayraykhere/resized/160/aoh14gjxlrhp1m3a6w25wepfziuhnglcw3g8grievnou' alt='')
+  .menu
+    a(href='/index') Home
+    a(href='/videos') Videos
+    a(href='/blog') Blog
+    a(href='/contact') Contact Me
+  .buttons
+    // <button class="btn">Search</button>
+    button.btn Login
+    button.btn Sign Up
+.container3
+  form(action="/contact", method= "post") 
+    h1 Contact me!
+    p Your Name
+    input(type='text' name= "name" placeholder='Enter your Name')
+    p Your Email
+    input(type='text' name= "email" placeholder='Enter your Email')
+    p Your Phone Number
+    input(type='number' name= "phone" placeholder='Enter your Phone Number')
+    p Describe what you want to contact me for here
+    textarea(name='desc' id='' cols='30' rows='5' placeholder='Your message')
+    button 
+      //- a(href='') 
+      | Submit
+footer
+  | Copyright &copy; 2021-2022 My-Project
